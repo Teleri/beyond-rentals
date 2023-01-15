@@ -11,7 +11,6 @@
 
 
   <script>
-    //banner
   var theme = {
     strings: {
       addToCart: "Add to cart",
@@ -27,8 +26,6 @@
     currencySymbol: "£",
     currencyIsoCode: "GBP"
   }
-
-  // document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
 
 </head>
@@ -45,187 +42,6 @@
       <header role="banner">
 
         <nav class="header grid-container grid-container--align-center grid-container--gutter site-wrapper--padding" data-section-id="header" data-section-type="header-section" role="navigation" aria-label="Primary">
-
-<!--           <a href="//" class="headline header__logo__link grid-col-md-8 grid-col-lg-12" tabindex="0">
-
-                  Beyond Rentals
-
-
-
-          </a>
-
-          <ul class="header__menu grid-col-md-8 grid-col-lg-12">
-
-            <li>
-              <a href="planets" class="type">Book</a>
-            </li>
-
-            <li>
-              <a href="users" class="type">About</a>
-            </li>
-
-          </ul>
-
-          <ul class="header__menu-right">
-
-            <li>
-              <form method="post" action="/cart/update" id="currency_form_desktop" accept-charset="UTF-8" class="shopify-currency-form" enctype="multipart/form-data">
-                <input type="hidden" name="form_type" value="currency"/>
-                <input type="hidden" name="utf8" value="✓"/>
-                <input type="hidden" name="return_to" value="/"/>
-
-              </form>
-            </li>
-
-
-          </ul>
-
-          <div class="header__mobile grid-container grid-col-sm-6 grid-col-md-8 site-wrapper--padding ">
-
-          </div>
-
-        </nav> -->
-
-        <!-- <nav class="header--sticky row col col--full col--v-center " aria-hidden="true" aria-label="Secondary"> -->
-
-
-
-
-
-
-          <!-- Desktop -->
-         <!--  <div class="header--sticky__desktop site-wrapper--padding row col-md-8 col-lg-12">
-            <div class="col-sm-3 col-md-4 col-lg-5">
-              <a href="/" class="headline header__logo__link">
-                      BEYOND RENTALS
-                    </a>
-            </div>
-            <div class="col-sm-9 col-md-4 col-lg-7">
-              <div class="row">
-                <div class="col-sm-10 col-md-4 col-lg-5">
-                  <ul class="header--sticky__desktop__menu left">
-
-                    <li>
-                      <a href="planets" class="type">Book</a>
-                    </li>
-
-                    <li>
-                      <a href="users" class="type">About</a>
-                    </li>
-
-                  </ul>
-                </div>
-                <div class="col-sm-2 col-md-4 col-lg-7">
-                  <ul class="header--sticky__desktop__menu right">
-                    <li>
-                      <form method="post" action="/cart/update" id="currency_form_desktop_sticky" accept-charset="UTF-8" class="shopify-currency-form" enctype="multipart/form-data">
-                        <input type="hidden" name="form_type" value="currency"/>
-                        <input type="hidden" name="utf8" value="✓"/>
-                        <input type="hidden" name="return_to" value="/"/>
-                        <select class="currency-select" name="currency" title="Select Currency">
-                          <option disabled>---</option>
-                          <option value="USD">$ USD</option>
-                          <option value="EUR">€ EUR</option>
-                          <option value="AUD">$ AUD</option>
-                          <option value="CAD">$ CAD</option>
-                          <option disabled>---</option>
-                          <option value="AED">د.إ AED</option>
-                          <option value="ANG">ƒ ANG</option>
-                          <option value="ARS">$ ARS</option>
-                          <option value="AWG">ƒ AWG</option>
-                          <option value="AZN">₼ AZN</option>
-                          <option value="BAM">КМ BAM</option>
-                          <option value="BBD">$ BBD</option>
-                          <option value="BGN">лв. BGN</option>
-                          <option value="BMD">$ BMD</option>
-                          <option value="BND">$ BND</option>
-                          <option value="BOB">Bs. BOB</option>
-                          <option value="BRL">R$ BRL</option>
-                          <option value="BSD">$ BSD</option>
-                          <option value="BWP">P BWP</option>
-                          <option value="BZD">$ BZD</option>
-                          <option value="CHF">CHF CHF</option>
-                          <option value="CLP">$ CLP</option>
-                          <option value="CNY">¥ CNY</option>
-                          <option value="CZK">Kč CZK</option>
-                          <option value="DJF">Fdj DJF</option>
-                          <option value="DKK">kr. DKK</option>
-                          <option value="EGP">ج.م EGP</option>
-                          <option value="ETB">Br ETB</option>
-                          <option value="FJD">$ FJD</option>
-                          <option value="FKP">£ FKP</option>
-                          <option value="GBP" selected="true">£ GBP</option>
-                          <option value="GEL">ლ GEL</option>
-                          <option value="GIP">£ GIP</option>
-                          <option value="GMD">D GMD</option>
-                          <option value="GTQ">Q GTQ</option>
-                          <option value="HKD">$ HKD</option>
-                          <option value="HNL">L HNL</option>
-                          <option value="HRK">kn HRK</option>
-                          <option value="ILS">₪ ILS</option>
-                          <option value="ISK">kr ISK</option>
-                          <option value="JPY">¥ JPY</option>
-                          <option value="KMF">Fr KMF</option>
-                          <option value="KYD">$ KYD</option>
-                          <option value="LSL">L LSL</option>
-                          <option value="MDL">L MDL</option>
-                          <option value="MOP">P MOP</option>
-                          <option value="MUR">₨ MUR</option>
-                          <option value="MVR">MVR MVR</option>
-                          <option value="MXN">$ MXN</option>
-                          <option value="MYR">RM MYR</option>
-                          <option value="NAD">$ NAD</option>
-                          <option value="NIO">C$ NIO</option>
-                          <option value="NOK">kr NOK</option>
-                          <option value="NZD">$ NZD</option>
-                          <option value="PAB">B/. PAB</option>
-                          <option value="PEN">S/. PEN</option>
-                          <option value="PGK">K PGK</option>
-                          <option value="PLN">zł PLN</option>
-                          <option value="QAR">ر.ق QAR</option>
-                          <option value="RON">Lei RON</option>
-                          <option value="RWF">FRw RWF</option>
-                          <option value="SAR">ر.س SAR</option>
-                          <option value="SBD">$ SBD</option>
-                          <option value="SCR">₨ SCR</option>
-                          <option value="SEK">kr SEK</option>
-                          <option value="SGD">$ SGD</option>
-                          <option value="SHP">£ SHP</option>
-                          <option value="SRD">$ SRD</option>
-                          <option value="SZL">E SZL</option>
-                          <option value="THB">฿ THB</option>
-                          <option value="TJS">ЅМ TJS</option>
-                          <option value="TOP">T$ TOP</option>
-                          <option value="TRY">₺ TRY</option>
-                          <option value="TTD">$ TTD</option>
-                          <option value="TWD">$ TWD</option>
-                          <option value="UAH">₴ UAH</option>
-                          <option value="UYU">$ UYU</option>
-                          <option value="VUV">Vt VUV</option>
-                          <option value="WST">T WST</option>
-                          <option value="XAF">Fr XAF</option>
-                          <option value="XCD">$ XCD</option>
-                          <option value="XOF">Fr XOF</option>
-                          <option value="XPF">Fr XPF</option>
-                          <option value="ZAR">R ZAR</option>
-                          <option value="ZMW">ZK ZMW</option>
-                        </select>
-                      </form>
-                    </li>
-                    <li class="type header__account-toggle">
-
-                      <a class="header__account type">Log In</a>
-
-                    </li>
-
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </nav> -->
 
         <div class="header--buybar row col col--full site-wrapper--padding">
           <a href="//" class="header__logo__link col-sm-3 col-md-2 col-lg-3" aria-label="">
@@ -304,7 +120,6 @@
             </div>
 
             <div id="RecoverPasswordForm" class="account__overlay-form__recover hide" aria-hidden="true">
-
               <div>
                 <h2>
                   Reset your password</p>
@@ -327,7 +142,6 @@
                   </div>
                 </form>
               </div>
-
             </div>
 
             <div class="account__overlay-form__create hide" aria-hidden="true">
@@ -336,8 +150,7 @@
                 <input type="hidden" name="utf8" value="✓"/>
                 <p class="account__overlay-form-title type type--link">
                   <span class="btn--text account-create-toggle">Login</span>
-                   or Create an account
-
+                  or Create an account
                 </p>
 
                 <div class="input-container has-placeholder">
@@ -365,9 +178,6 @@
                 </div>
               </form>
             </div>
-
-<!--             <img class="account__overlay__illustration lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/baboon-log-in-illustration_800x.png?v=5815221032823465381" alt="login illustration"/>
-            <img class="account__overlay__create-illustration hide lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/baboon-create-account-illustration_800x.png?v=9558259789340523399" alt="login alternate illustration"/> -->
           </div>
         </div>
 
@@ -424,7 +234,6 @@
     <!--[if lte IE 9]><script src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/theme.js?v=2324234763005770139"></script><![endif]-->
 
     <main class="main-content" id="MainContent" role="main">
-      <!-- BEGIN content_for_index -->
       <div id="shopify-section-1576146530914" class="shopify-section Homepage">
         <div id="homepage" class="homepage">
 
@@ -453,13 +262,6 @@
                       <title>Trips for Adventures</title>
                       <g id="Layer_2" data-name="Layer 2">
                         <g id="Layer_1-2" data-name="Layer 1">
-                         <!--  <path class="cls-1" d="M220.29,38a16.87,16.87,0,0,1-16.82,16.83H176.91V.08H201A13.74,13.74,0,0,1,211.2,23,16.88,16.88,0,0,1,220.29,38ZM188.82,21.17h11.51A4.55,4.55,0,0,0,205,16.58a4.67,4.67,0,0,0-4.67-4.67H188.82Zm19.32,16c0-4.19-3.14-5.64-7.41-5.64H188.82V42.9h11.91C205,42.9,208.14,41.45,208.14,37.19Z"/>
-                          <path class="cls-1" d="M260.06,29.78v25h-6.84l-3.06-3.55a17.08,17.08,0,0,1-11.27,4.35c-8,0-14.89-6-14.89-14.08,0-7.25,4.83-11.84,14.08-13.61,6-1.13,10-2.82,8.37-5.31-1.12-1.61-3.86-1.85-6.19-1.53a8.27,8.27,0,0,0-5.88,4.19l-8.21-5.48c2.66-4.1,7.81-7.65,15.37-7.65C252.73,12.15,260.06,19.4,260.06,29.78Zm-11.67,9.66v-6.2c-1.21.89-4.75,1.69-7.41,2.18-4.59,1-5.8,3-5.8,5.15,0,3.22,2.74,5.47,6,5.47C244.84,46,248.39,43.06,248.39,39.44Z"/>
-                          <path class="cls-1" d="M312.22,13V48.54c0,12.31-9.42,22.38-22.46,23.26a21.45,21.45,0,0,1-17-6l7-7a12.91,12.91,0,0,0,20.36-7.32,21.74,21.74,0,1,1-12.71-39.37,21.56,21.56,0,0,1,14,5.16L305.38,13ZM300.3,34a10.91,10.91,0,1,0-10.86,10.87A11,11,0,0,0,300.3,34Z"/>
-                          <path class="cls-1" d="M327,39c1.29,2.74,4.26,7.08,9.17,7.49,3.95.4,6.68-.73,6.76-3s-3.38-3.7-7.8-5.88c-8.94-4.1-14.73-7-14.73-13.6,0-6.92,6.28-12.4,17-11.83a16.75,16.75,0,0,1,15.46,10.7L344,26c-1.29-2.33-2.9-4.43-6.6-5.07s-6.28,1.21-6.36,2.74c-.08,2,2.58,3,6.92,5.15,8.21,3.38,15.62,6.92,15.94,13.84.49,8.45-6.6,13-16.66,13s-16-5.79-19.24-12.88Z"/>
-                          <path class="cls-1" d="M399,11.91v9.26h18.75v11H399V54.82H387.07V0H423V11.91Z"/> -->
-                          <!-- <path class="cls-1" d="M424.91,33.89c0-13.12,10.22-21.74,23.58-21.74S472,20.77,472,33.89s-10.23,21.73-23.51,21.73S424.91,47,424.91,33.89Zm35.25,0c0-6.68-5.23-10.95-11.67-10.95s-11.67,4.27-11.67,11,5.15,11,11.67,11S460.16,40.57,460.16,33.89Z"/>
-                          <path class="cls-1" d="M504.35,13.68,501.54,25A9.06,9.06,0,0,0,496,23.59c-3.22.24-6,2.25-6,6.11V54.82H478.11V13h6.6l3.14,3.3a12,12,0,0,1,9.1-4.11A16,16,0,0,1,504.35,13.68Z"/> -->
                           <path class="cls-1" d="M61.07,182.49H27.33L20.69,196.4H0L44.2,109,88.4,196.4H67.72Zm-7.63-15.88L44.2,147.15,35,166.61Z"/>
                           <path class="cls-1" d="M159.81,103.66v83.72H149.72l-6.28-6.65a33.3,33.3,0,1,1-1.85-52.08v-25Zm-18.22,51.83A16.69,16.69,0,1,0,125,172.12,16.84,16.84,0,0,0,141.59,155.49Z"/>
                           <path class="cls-1" d="M240.58,99.72l-36.32,67.72L167.2,99.72h20.56l16.37,32.14,16-32.14Z"/>
@@ -655,119 +457,9 @@
         </div>
 
       </div>
-      <!-- END content_for_index -->
 
       <div class="screensaver">
         <img src="data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg enable-background='new 0 0 612 792' version='1.1' viewBox='0 0 612 792' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFB38;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='307.66' cy='377.01' r='269.83'/%3E%3Cellipse cx='239.69' cy='304.3' rx='29.64' ry='90.22'/%3E%3Cellipse cx='375.63' cy='304.3' rx='29.64' ry='90.22'/%3E%3Cpath d='m307.66 574.13c-99.04 0-179.62-80.57-179.62-179.61h11.54c0 92.68 75.4 168.07 168.07 168.07s168.07-75.4 168.07-168.07h11.54c0.02 99.04-80.56 179.61-179.6 179.61z'/%3E%3C/svg%3E" width="80" height="80" alt="screensaver ball"/>
       </div>
 
     </main>
-    <!-- <div id="shopify-section-footer" class="shopify-section">
-      <footer class="footer row col col--full site-wrapper--padding" role="contentinfo">
-        <div class="col-sm-12 col-md-8 col-lg-2"></div>
-        <ul class="footer__menu col-sm-12 col-md-8 col-lg-8">
-
-          <li>
-            <a href="//" class="type">FAQ</a>
-          </li>
-
-          <li>
-            <a href="//" class="type">Contact</a>
-          </li>
-
-
-        </ul> -->
-        <!-- <ul class="footer__social-links col-sm-12 col-md-8 col-lg-2">
-
-          <li>
-            <a href="//" target="_blank">
-              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_instagram_01.png?v=13219043881283277671" alt="Instagram"/>
-            </a>
-          </li>
-
-          <li>
-            <a href="//" target="_blank">
-              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_twitter_01.png?v=6926024312470707691" alt="Twitter"/>
-            </a>
-          </li>
-
-          <li>
-            <a href="//" target="_blank">
-              <img width="50" height="auto" class="lazyload" data-src="//cdn.shopify.com/s/files/1/0078/6569/6313/t/103/assets/social_youtube_01.png?v=4398300105944963082" alt="YouTube"/>
-            </a>
-          </li>
-
-        </ul> -->
-<!--         <p class="back-to-top">
-          <span class="back-to-top__copy btn--text">Back to top</span>
-          <?xml version="1.0" encoding="UTF-8"?>
-          <svg class="back-to-top__icon" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Account" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Account_DSK_Add-Address" transform="translate(-1188.000000, -1555.000000)">
-                <g id="Footer" transform="translate(0.000000, 1556.000000)">
-                  <g id="Up" transform="translate(1086.000000, 0.000000)">
-                    <g id="Group-6" transform="translate(123.000000, 20.000000) rotate(-90.000000) translate(-123.000000, -20.000000) translate(103.000000, 0.000000)">
-                      <text id="&gt;-copy-2" class="arrow" font-family="SWBaboonType-Light, SW Baboon Type" font-size="26" font-weight="300" line-spacing="30" fill="">
-                        <tspan x="15" y="28">&gt;</tspan>
-                      </text>
-                      <rect id="Rectangle-4" class="border" stroke="" stroke-width="2" x="0" y="0" width="40" height="40"></rect>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </p>
-
-      </footer> -->
-
-
-
-<!--     </div>
-  </div> -->
-<!--   <div class="newsletter-popup row">
-    <form id="email_signup_popup" class="newsletter-popup__form klaviyo_bare_embed_KeuVyT col" action="//manage.kmail-lists.com/subscriptions/subscribe" data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" method="GET" target="_blank" novalidate="novalidate" role="form">
-      <?xml version="1.0" encoding="UTF-8"?>
-      <svg class="newsletter-popup__close" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g transform="translate(-284.000000, -38.000000)" fill="">
-            <g transform="translate(283.000000, 38.000000)">
-              <rect transform="translate(10.500000, 10.000000) scale(-1, 1) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
-              <rect transform="translate(10.500000, 10.000000) rotate(-45.000000) translate(-10.500000, -10.000000) " x="9" y="-2" width="3" height="24"></rect>
-            </g>
-          </g>
-        </g>
-      </svg>
-      <h2 class="newsletter-popup__title featured featured--bold">EMAIL ME</h2>
-      <p class="newsletter-popup__copy type">
-        Lorem ipsum dolor sit amet, sed do eiusmod videus chatum incididunt ut labore et dolore magna aliqua.
-        <br/>
-
-       Lorem ipsum dolor
-      </p>
-      <input type="hidden" name="g" value="KeuVyT">
-      <div class="klaviyo_field_group input-group newsletter-popup__input-group row">
-        <label for="k_id_email_popup" class="visually-hidden">Email</label>
-        <input type="email" value="" name="email" class="newsletter-popup__input col-lg-9" id="
-        " placeholder="Email address" required/>
-        <div class="klaviyo_messages">
-          <div class="success_message" style="display:none;">
-            <span class="newsletter-popup__success">
-                        SUCCESS.
-                      </span>
-          </div>
-        </div>
-        <button type="submit" class="klaviyo_submit_button newsletter-popup__button col-lg-3">GO</button>
-        <div class="error_message" style="display:none;">Invalid email, give it another shot.</div>
-      </div>
-    </form>
-  </div> -->
-<!--   <section>
-   <%= image_tag "WAI_Globe_720p_D1.gif", :class => "footer__newsletter dino row col col--v-center site-wrapper--padding lazyload", width: "1280px" %>
-
-    <h5 class="footer__newsletter__title large large--bold col col-sm-6 col-md-6 col-lg-6">Accept the Mystery</h5>
-
-  </section> -->
-
-
-

@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   before_action :find_user, only: :show
-  before_action :find_planet, only: [:new, :create, :show, :accept]
-  before_action :find_booking, only: [:edit, :update, :show, :destroy, :accept]
+  before_action :find_planet, only: [:new, :create, :show, :confirm_booking]
+  before_action :find_booking, only: [:edit, :update, :show, :destroy, :confirm_booking]
 
   def index
-    @bookings = Booking.all
-    @user = current_user
+    my_planets = Planet.where(user_id: current_user.id)
+    @my_planets_bookings = Booking.where(planet_id: my_planets.map(&:id))
+
+    @my_booking_requests = Booking.where(user_id: current_user.id).order(status: :desc)
   end
 
   def show
@@ -17,13 +19,12 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @booking = Booking.new(booking_params)
     @booking.planet = @planet
-    @booking.user = @user
+    @booking.user = current_user
     if @booking.save
       @booking.save!
-      redirect_to user_bookings_path(@user)
+      redirect_to user_bookings_path(current_user)
     else
       render "form"
     end
@@ -52,9 +53,9 @@ class BookingsController < ApplicationController
     end
   end
 
-  def accept
-    @booking.update(status: true)
-    @booking.save!
+  def confirm_booking
+    @booking.confirm
+    redirect_to user_bookings_path(current_user)
   end
 
   private

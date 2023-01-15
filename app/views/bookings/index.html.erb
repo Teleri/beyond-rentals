@@ -1,68 +1,83 @@
 <div class="bookings-index-background">
   <div class="container">
-    <h1 class="your-bookings-header">Your Bookings</h1>
-    <ul class="booking-list">
-      <% @bookings.sort.each do |booking| %>
-        <% if booking.user_id == @user.id %>
-          <li class="booking-info">
-            <div class="booking-flex-box">
-              <div class="planet-info-left">
-                <%# logic for getting the planet name of the booking %>
-                <div class="planet-name">
-                  <% planet = Planet.where(id: booking.planet_id) %>
-                  <% planet_name = Planet.where(id: planet[0].id) %>
-                  <h3 class="planet-name"><strong>Booking for your trip to: <%= planet_name[0].name %></strong></h3>
-                </div>
-                <div class="booking-dates">
-                  <ul>
-                    <li class="booking-start-date-list">
-                      <p class="booking-start-date-text"><strong>Start date:</strong> <%= booking.start_date.day %>/<%= booking.start_date.month %>/<%= booking.start_date.year %></p>
-                    </li>
-                    <li class="booking-end-date-list">
-                      <p class="booking-end-date-text"><strong>End date:</strong> <%= booking.end_date.day %>/<%= booking.end_date.month %>/<%= booking.end_date.year %></p>
-                    </li>
-                    <li class="booking-total-days-list">
-                      <p class="booking-total-days-text"><strong>Total visit time:</strong> <% total_dates = booking.end_date - booking.start_date %><%= total_dates.to_i %> days</p>
-                    </li>
-                    <li class="booking-total-price-list">
-                      <p class="booking-total-price-text"><strong>Total price of trip: </strong>£<%= total_dates.to_i * planet[0].price_per_day%></p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="status-info">
-                  <div class="status-msg">
-                    <% if booking.status %>
-                      <p class="booking-accepted">Booking accepted</p>
-                    <% else %>
-                      <p class="booking-not-yet-accepted">Booking not yet accepted</p>
-                    <% end %>
-                  </div>
-                  <%# ############################ To be implemented in second week ########################### %>
-                  <%# if !booking.status %>
-                    <%#= link_to accept_planet_booking_path(@planet, booking), method: :patch, remote: true do %>
-                      <%# <button class="btn btn-primary accept-booking-request">Accept booking request</button> %>
-                    <%# end %>
-                  <%# else %>
-                    <%# <button class="btn btn-primary disabled-btn" disabled = true>Booking accepted</button> %>
-                  <%# end %>
-                  <%# ######################################################################################## %>
-                </div>
-              </div>
-              <div class="planet-info-right">
-                <div class="planet-name">
-                  <% planet = Planet.where(id: booking.planet_id) %>
-                  <% planet_name = Planet.where(id: planet[0].id) %>
-                  <div class="planet-image">
-                    <img src="<%= cl_image_path planet_name[0].photo.key %>" class="planet-img">
-                  </div>
-                </div>
-              </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-6 my-booking-requests">
+        <h1 class="bookings-header">My booking requests</h1>
+        <% @my_booking_requests.each do |booking| %>
+          <div class="planet-name">
+            <h3 class="planet-name"><strong>Booking for your trip to: <%= link_to booking.planet.name, planet_path(booking.planet) %></strong></h3>
+          </div>
+
+          <div class="booking-dates">
+            <ul>
+              <li class="booking-start-date-list">
+                <p class="booking-start-date-text"><strong>Start date:</strong> <%= booking.start_date.day %>/<%= booking.start_date.month %>/<%= booking.start_date.year %></p>
+              </li>
+              <li class="booking-end-date-list">
+                <p class="booking-end-date-text"><strong>End date:</strong> <%= booking.end_date.day %>/<%= booking.end_date.month %>/<%= booking.end_date.year %></p>
+              </li>
+              <li class="booking-total-days-list">
+                <p class="booking-total-days-text"><strong>Total visit time:</strong> <% total_dates = booking.end_date - booking.start_date %><%= total_dates.to_i %> days</p>
+              </li>
+              <li class="booking-total-price-list">
+                <p class="booking-total-price-text"><strong>Total price of trip: </strong>£<%= total_dates.to_i * booking.planet.price_per_day %></p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="status-info">
+            <div class="status-msg">
+              <% if booking.status %>
+                <p class="booking-confirmed">confirmed</p>
+              <% else %>
+                <p class="booking-not-confirmed">Unconfirmed</p>
+              <% end %>
             </div>
-          </li>
-          <% else %>
-          <p class="no-bookings">No bookings</p>
+          </div>
         <% end %>
-      <% end %>
-    </ul>
+      </div>
+      <div class="col-6 my-planets-bookings">
+        <h1 class="bookings-header">My planet bookings</h1>
+
+        <% @my_planets_bookings.each do |booking| %>
+          <div class="planet-name">
+            <h3 class="planet-name"><strong>Booking for your trip to: <%= link_to booking.planet.name, planet_path(booking.planet) %></strong></h3>
+          </div>
+
+          <div class="booking-dates">
+            <ul>
+              <li class="booking-start-date-list">
+                <p class="booking-start-date-text"><strong>Start date:</strong> <%= booking.start_date.day %>/<%= booking.start_date.month %>/<%= booking.start_date.year %></p>
+              </li>
+              <li class="booking-end-date-list">
+                <p class="booking-end-date-text"><strong>End date:</strong> <%= booking.end_date.day %>/<%= booking.end_date.month %>/<%= booking.end_date.year %></p>
+              </li>
+              <li class="booking-total-days-list">
+                <p class="booking-total-days-text"><strong>Total visit time:</strong> <% total_dates = booking.end_date - booking.start_date %><%= total_dates.to_i %> days</p>
+              </li>
+              <li class="booking-total-price-list">
+                <p class="booking-total-price-text"><strong>Total price of trip: </strong>£<%= total_dates.to_i * booking.planet.price_per_day %></p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="status-info">
+            <div class="status-msg">
+              <% if booking.status %>
+                <p class="booking-confirmed">confirmed</p>
+              <% else %>
+                <p class="booking-not-confirmed">Unconfirmed</p>
+              <% end %>
+            </div>
+          </div>
+
+          <% if booking.not_confirmed? %>
+            <%= button_to "Confirm booking", confirm_booking_planet_booking_path(booking.planet, booking), method: :put, class: "btn btn-success" %>
+          <% end %>
+
+        <% end %>
+        
+      </div>
+    </div>
   </div>
 </div>
